@@ -2,6 +2,13 @@
 
 All notable changes to PsyLinks 360° Security are documented here.
 
+## [1.0.1] — 2026-09-09
+
+### Fixed
+
+- Made the canonical `.claude/skills/psylinks-360-security/` directory self-contained, including its references and scanner.
+- Clarified the Claude Code installation instructions.
+
 ## [1.0.0] — 2026-09-09
 
 ### Added

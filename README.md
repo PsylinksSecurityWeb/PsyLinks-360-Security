@@ -34,28 +34,27 @@ If your Claude client does not accept `.skill` uploads, use the source installat
 
 ### Claude Code: personal installation
 
-Claude Code discovers skills from `~/.claude/skills/<skill-name>/SKILL.md`. The repository includes the canonical project layout at `.claude/skills/psylinks-360-security/`:
+Claude Code discovers skills from `~/.claude/skills/<skill-name>/SKILL.md`. The repository includes a self-contained canonical skill directory at `.claude/skills/psylinks-360-security/`:
 
 ```bash
 git clone https://github.com/PsylinksSecurityWeb/PsyLinks-360-Security.git
 cd PsyLinks-360-Security
 mkdir -p ~/.claude/skills/psylinks-360-security
 cp -R .claude/skills/psylinks-360-security/. ~/.claude/skills/psylinks-360-security/
-cp -R references scripts SKILL.md LICENSE.md SECURITY.md ~/.claude/skills/psylinks-360-security/
 ```
 
 Start Claude Code in a project and test automatic invocation with a request such as: `Review this API for security issues.` You can also invoke the skill directly with `/psylinks-360-security` when your Claude Code version exposes it as a slash command.
 
 ### Claude Code: project installation
 
-To share the skill with a team working in one repository, copy the canonical directory into that project's `.claude/skills/` folder and commit it:
+To share the skill with a team working in one repository, copy the self-contained canonical directory into that project's `.claude/skills/` folder and commit it:
 
 ```bash
 mkdir -p .claude/skills
 cp -R /path/to/PsyLinks-360-Security/.claude/skills/psylinks-360-security .claude/skills/
 ```
 
-Keep the referenced `SKILL.md`, `references/`, and `scripts/` files beside the installed skill, or adapt the entry point to your team's layout. See the [Claude Code skills documentation](https://code.claude.com/docs/en/skills) for the supported scopes and invocation behavior.
+See the [Claude Code skills documentation](https://code.claude.com/docs/en/skills) for the supported scopes and invocation behavior.
 
 ### Other AI coding tools
 
