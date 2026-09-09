@@ -1,0 +1,33 @@
+name: Validate skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Compile scanner
+        run: python -m py_compile scripts/scan.py
+
+      - name: Run offline self-scan
+        run: python scripts/scan.py . --no-network --no-audit --json > scan-results.json
+
+      - name: Require a clean self-scan
+        run: python -c "import json; d=json.load(open('scan-results.json')); assert not d['findings'], d['findings']; assert d['grade']['letter'] == 'A', d['grade']"
+
+      - name: Verify packaged skill
+        run: unzip -t psylinks-360-security.skill
