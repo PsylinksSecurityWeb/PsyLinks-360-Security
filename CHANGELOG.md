@@ -2,6 +2,13 @@
 
 All notable changes to PsyLinks 360° Security are documented here.
 
+## [1.0.5] — 2026-09-09
+
+### Added
+
+- Added cross-tool installation guidance for OpenAI Codex, Cursor, Antigravity, and `AGENTS.md`-compatible IDEs.
+- Added `AGENTS.md` and a Cursor `.mdc` rules bridge for tools without automatic skill discovery.
+
 ## [1.0.4] — 2026-09-09
 
 ### Added

@@ -1,0 +1,16 @@
+---
+description: Apply PsyLinks 360° Security Review when working on authentication, APIs, backend services, databases, secrets, dependencies, deployment, or AI-agent/MCP workflows.
+alwaysApply: false
+---
+
+Use the complete PsyLinks 360° Security instructions in [`SKILL.md`](../../SKILL.md).
+
+When this rule applies:
+
+1. Read the relevant checklist under [`references/`](../../references/).
+2. Run [`scripts/scan.py`](../../scripts/scan.py) against the project or files reviewed.
+3. Fix Critical and High findings, then run the scan again.
+4. Perform the adversarial self-audit described in `SKILL.md`.
+5. Report what was actually checked and what remains outside coverage.
+
+Do not claim that scanner-clean means secure or that the tool replaces professional security review.

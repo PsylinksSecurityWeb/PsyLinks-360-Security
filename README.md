@@ -58,7 +58,22 @@ See the [Claude Code skills documentation](https://code.claude.com/docs/en/skill
 
 ### Other AI coding tools
 
-For tools that support Agent Skills, use the repository root as the skill directory or follow that tool's documented skill path. For tools that use project instructions instead, include the contents of [`SKILL.md`](./SKILL.md) and preserve its linked resources. AI tools differ in discovery behavior; copying a file into an arbitrary folder does not automatically activate it.
+For tools that support Agent Skills, use the repository root as the skill directory or follow that tool's documented skill path. OpenAI Codex supports versioned skill bundles with a `SKILL.md` manifest. Cursor supports the open Agent Skills format and discovers project skills from `.agents/skills/`, `.cursor/skills/`, `.claude/skills/`, and `.codex/skills/`; this repository already includes the `.claude/skills/` entry point and its bundled resources.
+
+For Cursor, you can also import the GitHub repository from **Customize → Rules → Add Rule → Remote Rule (Github)**, or copy the self-contained skill directory into `.cursor/skills/psylinks-360-security/`.
+
+For Codex, copy the same directory into your Codex skills directory:
+
+```bash
+mkdir -p ~/.codex/skills/psylinks-360-security
+cp -R .claude/skills/psylinks-360-security/. ~/.codex/skills/psylinks-360-security/
+```
+
+For a Cursor project, the repository also includes a compatible bridge at [`.cursor/rules/psylinks-360-security.mdc`](./.cursor/rules/psylinks-360-security.mdc).
+
+For Antigravity and other IDE agents that do not automatically discover Agent Skills, copy [`AGENTS.md`](./AGENTS.md) into the project root or paste its instructions into the IDE's project rules/instructions area. The same fallback works for tools that support `AGENTS.md` but not skills.
+
+AI tools differ in discovery behavior; copying a file into an arbitrary folder does not automatically activate it. Always verify activation by asking the agent to perform a security review and confirm that it reads the PsyLinks workflow and scanner.
 
 ### Scanner-only use
 
