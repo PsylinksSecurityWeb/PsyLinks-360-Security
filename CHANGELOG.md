@@ -2,6 +2,12 @@
 
 All notable changes to PsyLinks 360° Security are documented here.
 
+## [1.0.3] — 2026-09-09
+
+### Fixed
+
+- Fixed scanning of a single file path, matching the documented CLI usage and quick demo.
+
 ## [1.0.1] — 2026-09-09
 
 ### Fixed

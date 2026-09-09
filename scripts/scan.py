@@ -193,6 +193,9 @@ def watermark(key, mode):
 
 
 def iter_files(root):
+    if os.path.isfile(root):
+        yield root
+        return
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS and not d.startswith(".")]
         for fn in filenames:
