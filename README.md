@@ -72,6 +72,10 @@ python3 scripts/scan.py /path/to/your/project --no-network --no-audit
 
 The scanner does not rewrite code. Review each finding, make the fix in the project, and run the same scan again before treating an issue as resolved.
 
+### Try it in under a minute
+
+Run the [safe quick demo](./examples/quick-demo.md) to see a credential-looking assignment detected without scanning a real project or using network access.
+
 ## Free and Pro coverage
 
 Without a license key, the scanner runs its Free tier: hardcoded-secret and insecure-configuration checks. A valid PsyLinks license key enables the Pro pattern set, dependency auditing, and package-registry verification:
@@ -92,6 +96,7 @@ The scanner may contact the PsyLinks license endpoint when a key is supplied. If
 | `.claude/skills/psylinks-360-security/` | Canonical Claude Code project-skill entry point |
 | `references/` | Focused security checklists and OWASP mapping |
 | `scripts/scan.py` | Stdlib-only static and optional dependency scanner |
+| `examples/quick-demo.md` | Safe copy-paste demonstration |
 | `psylinks-360-security.skill` | Packaged skill artifact for clients that support `.skill` uploads |
 | `.github/workflows/validate.yml` | Automated syntax, self-scan, and artifact validation |
 | `CONTRIBUTING.md` | Contribution and testing guidance |

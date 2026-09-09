@@ -2,6 +2,13 @@
 
 All notable changes to PsyLinks 360° Security are documented here.
 
+## [1.0.4] — 2026-09-09
+
+### Added
+
+- Added the safe quick-start scanning demo to the published repository.
+- Clarified the repository description and Free/Pro positioning.
+
 ## [1.0.3] — 2026-09-09
 
 ### Fixed
